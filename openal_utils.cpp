@@ -2,6 +2,8 @@
 #include <iostream>
 #include <unordered_map>
 
+namespace openal_utils {
+
 const std::unordered_map<ALenum, std::string> al_attribute_names = {
     {AL_PITCH, "AL_PITCH"},
     {AL_GAIN, "AL_GAIN"},
@@ -289,3 +291,4 @@ void shutdown_openal() {
     alcDestroyContext(context);
     alcCloseDevice(device);
 }
+} // namespace openal_utils

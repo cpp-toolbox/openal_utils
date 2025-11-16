@@ -6,8 +6,9 @@
 #include <string>
 #include <glm/glm.hpp>
 
-// TODO: renmae to openal_utils and then make it a submodule
-// TODO: on operations that can fail we can return an optional
+// TODO: on operations that can fail we can return an optional ?
+
+namespace openal_utils {
 
 std::string get_attribute_name(ALenum attribute);
 void display_al_error(const std::string &message, ALenum error);
@@ -67,5 +68,6 @@ void delete_source(ALuint source);
 // global openal context management
 void initialize_openal();
 void shutdown_openal();
+} // namespace openal_utils
 
 #endif // OPENAL_UTILS_HPP
